@@ -1,10 +1,6 @@
-import { catchError, finalize } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
 import { UserModel } from './user-model';
 import { UsersService } from './users.service';
-import { map } from 'rxjs/internal/operators/map';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
