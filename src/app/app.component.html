@@ -10,7 +10,7 @@
       <th>Email</th>
       <th>Gender</th>
     </tr>
-    <tr *ngFor="let user of users | filterUsers: userName | paginate: { itemsPerPage: 5, currentPage: p }">
+    <tr *ngFor="let user of users | filterUsers: userName | paginate: { itemsPerPage: 5, currentPage:pageIndex }">
       <td>{{user.first_name}}</td>
       <td>{{user.last_name}}</td>
       <td>{{user.email}}</td>
@@ -18,7 +18,7 @@
     </tr>
   </table>
   <div class="pagination">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls (pageChange)="pageEvent($event)"></pagination-controls>
   </div>
 </div>
 

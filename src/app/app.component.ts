@@ -14,7 +14,8 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit{
   
   public users: UserModel[];
-  public userName:string
+  public userName:string;
+  public pageIndex:number;
 
   constructor(private usersService:UsersService){}
 
@@ -28,4 +29,8 @@ export class AppComponent implements OnInit{
         this.users = res;
     })
   }
+
+  pageEvent(page: number) {
+    this.pageIndex = page;
+   }
 }
