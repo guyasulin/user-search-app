@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "https://storage.googleapis.com/static.aoni.io/demo/user.json",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }
