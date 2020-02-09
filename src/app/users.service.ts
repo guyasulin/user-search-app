@@ -9,6 +9,6 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<any> {
-    return this.http.get('https://storage.googleapis.com/static.aoni.io/demo/user.json')    
+    return this.http.get('/posts')    
   }
 }
