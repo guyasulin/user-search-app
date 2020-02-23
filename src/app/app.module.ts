@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 
 import { SearchPipe } from './search.pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { AppData } from './app-data';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    InMemoryWebApiModule.forRoot(AppData, { delay: 1000 }),
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
